@@ -1,0 +1,10 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {"name": "P1: Scan 127.0.0.1", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/cognevance_network_vulnerability_assessment/scanner.py", "args": ["127.0.0.1", "--no-nmap"], "cwd": "${workspaceFolder}/cognevance_network_vulnerability_assessment", "console": "integratedTerminal"},
+    {"name": "P2: Vulnerable app (5000)", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/cognevance_web_application_security_testing/vulnerable_app/app.py", "console": "integratedTerminal"},
+    {"name": "P2: Secure app (5001)", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/cognevance_web_application_security_testing/vulnerable_app/secure_app.py", "console": "integratedTerminal"},
+    {"name": "P2: Web tester -> 5000", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/cognevance_web_application_security_testing/tester/web_tester.py", "args": ["http://127.0.0.1:5000"], "console": "integratedTerminal"},
+    {"name": "P3: SIEM pipeline", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/cognevance_security_monitoring_incident_response/run_pipeline.py", "cwd": "${workspaceFolder}/cognevance_security_monitoring_incident_response", "console": "integratedTerminal"}
+  ]
+}

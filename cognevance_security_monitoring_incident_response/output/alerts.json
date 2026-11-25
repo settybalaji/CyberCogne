@@ -1,0 +1,142 @@
+[
+  {
+    "severity": "Critical",
+    "rule": "SSH brute force followed by success",
+    "src_ip": "203.0.113.45",
+    "description": "14 failed logins then successful login as 'root' - probable compromise",
+    "first_seen": "2026-11-25T09:00:24",
+    "mitre": "T1110 Brute Force",
+    "count": 14,
+    "id": "ALR-001"
+  },
+  {
+    "severity": "High",
+    "rule": "Path traversal attempt",
+    "src_ip": "192.0.2.77",
+    "description": "/download?file=../../etc/passwd",
+    "first_seen": "2026-11-25T12:00:07",
+    "mitre": "T1083 File and Directory Discovery",
+    "count": 1,
+    "id": "ALR-002"
+  },
+  {
+    "severity": "High",
+    "rule": "SQL injection attempt",
+    "src_ip": "192.0.2.77",
+    "description": "/login?user=admin'--",
+    "first_seen": "2026-11-25T12:00:48",
+    "mitre": "T1190 Exploit Public-Facing App",
+    "count": 1,
+    "id": "ALR-003"
+  },
+  {
+    "severity": "Medium",
+    "rule": "Sensitive path probe",
+    "src_ip": "198.51.100.23",
+    "description": "/phpmyadmin6",
+    "first_seen": "2026-11-25T10:20:00",
+    "mitre": "T1595 Active Scanning",
+    "count": 1,
+    "id": "ALR-004"
+  },
+  {
+    "severity": "Medium",
+    "rule": "Web scanning / forced browsing",
+    "src_ip": "198.51.100.23",
+    "description": "26 404 responses",
+    "first_seen": "2026-11-25T10:20:00",
+    "mitre": "T1595 Active Scanning",
+    "count": 26,
+    "id": "ALR-005"
+  },
+  {
+    "severity": "Medium",
+    "rule": "Sensitive path probe",
+    "src_ip": "198.51.100.23",
+    "description": "/phpmyadmin2",
+    "first_seen": "2026-11-25T10:20:08",
+    "mitre": "T1595 Active Scanning",
+    "count": 1,
+    "id": "ALR-006"
+  },
+  {
+    "severity": "Medium",
+    "rule": "Sensitive path probe",
+    "src_ip": "198.51.100.23",
+    "description": "/phpmyadmin1",
+    "first_seen": "2026-11-25T10:20:54",
+    "mitre": "T1595 Active Scanning",
+    "count": 1,
+    "id": "ALR-007"
+  },
+  {
+    "severity": "Medium",
+    "rule": "Sensitive path probe",
+    "src_ip": "198.51.100.23",
+    "description": "/phpmyadmin13",
+    "first_seen": "2026-11-25T10:21:43",
+    "mitre": "T1595 Active Scanning",
+    "count": 1,
+    "id": "ALR-008"
+  },
+  {
+    "severity": "Medium",
+    "rule": "Sensitive path probe",
+    "src_ip": "198.51.100.23",
+    "description": "/phpmyadmin10",
+    "first_seen": "2026-11-25T10:21:50",
+    "mitre": "T1595 Active Scanning",
+    "count": 1,
+    "id": "ALR-009"
+  },
+  {
+    "severity": "Medium",
+    "rule": "Sensitive path probe",
+    "src_ip": "198.51.100.23",
+    "description": "/phpmyadmin18",
+    "first_seen": "2026-11-25T10:22:49",
+    "mitre": "T1595 Active Scanning",
+    "count": 1,
+    "id": "ALR-010"
+  },
+  {
+    "severity": "Medium",
+    "rule": "Sensitive path probe",
+    "src_ip": "198.51.100.23",
+    "description": "/phpmyadmin21",
+    "first_seen": "2026-11-25T10:22:58",
+    "mitre": "T1595 Active Scanning",
+    "count": 1,
+    "id": "ALR-011"
+  },
+  {
+    "severity": "Medium",
+    "rule": "Sensitive path probe",
+    "src_ip": "198.51.100.23",
+    "description": "/.env",
+    "first_seen": "2026-11-25T10:25:33",
+    "mitre": "T1595 Active Scanning",
+    "count": 1,
+    "id": "ALR-012"
+  },
+  {
+    "severity": "Medium",
+    "rule": "XSS attempt",
+    "src_ip": "192.0.2.77",
+    "description": "/search?q=<script>alert(1)</script>",
+    "first_seen": "2026-11-25T12:00:44",
+    "mitre": "T1059.007 JavaScript",
+    "count": 1,
+    "id": "ALR-013"
+  },
+  {
+    "severity": "Low",
+    "rule": "Off-hours login",
+    "src_ip": "10.0.1.99",
+    "description": "dave logged in at 02:14",
+    "first_seen": "2026-11-25T02:14:00",
+    "mitre": "T1078 Valid Accounts",
+    "count": 1,
+    "id": "ALR-014"
+  }
+]

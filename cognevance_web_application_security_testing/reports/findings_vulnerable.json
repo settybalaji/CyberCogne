@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Missing security header",
+    "severity": "Low",
+    "url": "http://127.0.0.1:5000",
+    "detail": "Content-Security-Policy missing - Mitigates XSS and data injection",
+    "fix": "Add the Content-Security-Policy response header"
+  },
+  {
+    "type": "Missing security header",
+    "severity": "Low",
+    "url": "http://127.0.0.1:5000",
+    "detail": "X-Content-Type-Options missing - Stops MIME sniffing",
+    "fix": "Add the X-Content-Type-Options response header"
+  },
+  {
+    "type": "Missing security header",
+    "severity": "Low",
+    "url": "http://127.0.0.1:5000",
+    "detail": "X-Frame-Options missing - Prevents clickjacking",
+    "fix": "Add the X-Frame-Options response header"
+  },
+  {
+    "type": "Missing security header",
+    "severity": "Low",
+    "url": "http://127.0.0.1:5000",
+    "detail": "Referrer-Policy missing - Limits referrer leakage",
+    "fix": "Add the Referrer-Policy response header"
+  }
+]

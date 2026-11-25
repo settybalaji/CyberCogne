@@ -1,0 +1,11 @@
+filebeat.inputs:
+  - type: filestream
+    id: auth
+    paths: [/logs/auth.log]
+    fields: {log_type: auth}
+  - type: filestream
+    id: web
+    paths: [/logs/access.log]
+    fields: {log_type: web}
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]

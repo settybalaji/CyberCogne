@@ -1,0 +1,19 @@
+# Optional: ELK stack for the SIEM part (lab use only). Requires Docker. Run: docker compose up -d
+# Kibana: http://localhost:5601   Then ship ../data/*.log using filebeat.yml
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
+    environment: [discovery.type=single-node, xpack.security.enabled=false, ES_JAVA_OPTS=-Xms1g -Xmx1g]
+    ports: ["127.0.0.1:9200:9200"]
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.13.4
+    environment: [ELASTICSEARCH_HOSTS=http://elasticsearch:9200]
+    ports: ["127.0.0.1:5601:5601"]
+    depends_on: [elasticsearch]
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.13.4
+    user: root
+    volumes:
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ../data:/logs:ro
+    depends_on: [elasticsearch]
