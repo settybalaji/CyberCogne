@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "target": "127.0.0.1",
+    "date": "2026-11-25T06:07:18",
+    "engine": "python-socket"
+  },
+  "results": {
+    "127.0.0.1": [
+      {
+        "port": 5000,
+        "proto": "tcp",
+        "service": "unknown",
+        "version": "",
+        "risk": "Unrecognised service - verify it is needed",
+        "severity": "Info",
+        "recommendation": "Close if unused"
+      }
+    ]
+  }
+}
