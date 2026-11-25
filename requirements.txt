@@ -1,1 +1,7 @@
 # No third-party packages required. Optional: install Nmap (https://nmap.org) for service/version detection.
+
+scapy
+requests
+python-nmap
+colorama
+reportlab
